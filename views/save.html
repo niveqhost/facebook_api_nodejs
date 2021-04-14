@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+</head>
+
+<body>
+    <h1>Oops!</h1>
+    <h2>404 Page Not Found</h2>
+    <%- include('partials/header.ejs') %>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1590141388041736',
+                cookie: true,
+                xfbml: true,
+                version: 'v10.0.'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+            console.log(response);
+        });
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0"
+        nonce="rQ2OosqF"></script>
+    <div class="my-info">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">#</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">User ID</th>
+                    <td>60710d9e2370d</td>
+                </tr>
+                <tr>
+                    <th scope="row">First Name</th>
+                    <td>Tarina</td>
+                </tr>
+                <tr>
+                    <th scope="row">Surname </th>
+                    <td>PRILLWITZ</td>
+                </tr>
+                <tr>
+                    <th scope="row">First Name (transliteration)</th>
+                    <td>Tarina</td>
+                </tr>
+                <tr>
+                    <th scope="row">Surname (transliteration)</th>
+                    <td>PRILLWITZ</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gender</th>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <th scope="row">Birthday</th>
+                    <td>1938-09-18</td>
+                </tr>
+                <tr>
+                    <th scope="row">Age</th>
+                    <td>82</td>
+                </tr>
+            </tbody>
+        </table>
+        Country: United States
+        Country ISO3: USA
+        Passport Number: 326557398
+        Social Security / National Insurance: 560-94-0053
+        Phone Number: +1287 822 7140
+        Address: 1003, 4th St, Hamilton, Ravalli, Montana
+        Transliterated Address: 1003, 4th St, Hamilton, Ravalli, Montana
+        Zip Code: 59840
+        Email: Tarina.PRILLWITZ@exam_ple.com
+        Username: yacht_Tarina464
+        Password: HNRUvRqnw
+        Date of registration: 2021-03-11
+        Occupation: Retired
+        >Mother's Maiden Name: BLUMENBERG
+        CC Type: Visa
+        CC Number: 4130579049362096
+        CVV2: 816
+        CC Expiration Date: 2026/03
+        Account Number: 5525612476
+        Bank Code: 124003116
+        Bank Name: Ally Bank
+        Annual Income: 44,090
+        Weight, kg: 75.30
+        Height, cm: 160
+        Blood Type: O+
+        Eye Color: light amber
+        Hair Color: copper
+        Clothes Size: xxl
+    </div>
+    <div class="fb-comments float-right" data-href="http://localhost/homeworkAPI.html" data-width="" data-numposts="10">
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

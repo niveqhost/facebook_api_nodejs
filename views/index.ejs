@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs")  %>
+<script type="text/javascript" src="./public/js/fbAPIscript.js"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=1590141388041736&autoLogAppEvents=1" nonce="fAarA1Z7"></script>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Facebook API</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a href="/">Trang chủ</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="logout" href="#" onclick="logout()">Đăng xuất</a></li>
+            </ul>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <fb:login-button id="fb-btn" scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+</nav>
+
+<div class="container">
+    <h3 id="heading">Đăng nhập để xem thông tin của bạn</h3>
+    <div id="profile"></div>
+    <div id="feed"></div>
+</div>
+<!-----Hiển thị nút Like, Comment----->
+<div class="container">
+    <div id="btn-like" class="fb-like float-left" data-href="https://www.facebook.com/tranhai97/posts/2051041171702733" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true" data-colorscheme="light"></div>
+    <div id="comment-section" class="fb-comments float-right" data-href="https://www.facebook.com/tranhai97/posts/2051041171702733" data-width="" data-numposts="10"></div>
+</div>
+<%- include("partials/footer.ejs") %>

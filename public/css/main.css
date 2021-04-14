@@ -1,0 +1,11 @@
+#fb-btn {
+    margin-top: 5px;
+}
+#profile,
+#logout,
+#feed {
+    display: none;
+}
+.fb-like {
+    margin: 50px 0 0 0;
+}
